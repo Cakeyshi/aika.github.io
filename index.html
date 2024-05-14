@@ -19,6 +19,107 @@
         </div>          
     </main>
     <button id="funButton">No</button>
+  <div>
+      <!--
+
+import java.util.Random;
+
+class MatrixGenerator {
+    private int[][] matrix;
+    private int rows;
+    private int cols;
+
+    public MatrixGenerator(int rows, int cols) {
+        this.rows = rows;
+        this.cols = cols;
+        this.matrix = new int[rows][cols];
+    }
+
+    public void generateMatrix() {
+        Random rand = new Random();
+        int countX = 0;
+        int countY = 10;
+        int countAsterisks = 0;
+        int countXLetters = 0;
+        int countYLetters = 0;
+        int countIntegers = 0;
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (j % 2 == 0) {
+                    if (i % 2 == 0) {
+                        matrix[i][j] = countX;
+                        countX += 2;
+                        countIntegers++;
+                        System.out.print("[" + "x*" + matrix[i][j] + "]");
+                        countXLetters++;
+                    } else {
+                        matrix[i][j] = countY;
+                        countY += 2;
+                        countIntegers++;
+                        System.out.print("[" + "y" + matrix[i][j] + "]");
+                        countYLetters++;
+                    }
+                } else {
+                    matrix[i][j] = -1; // Asterisks placeholder
+                    countAsterisks++;
+                    System.out.print("[***]");
+                }
+            }
+            System.out.println();
+        }
+
+        System.out.println("\nThere are " + countAsterisks / 3 + " groups of 3 asterisks");
+        for (int i = 0; i < countAsterisks / 3; i++) {
+            System.out.print("[***] ");
+        }
+
+        System.out.println("\n\nThere are " + (countXLetters + countYLetters) + " groups of x and y");
+        for (int i = 0; i < countXLetters; i++) {
+            System.out.print("[x*" + (i * 2) + "] ");
+        }
+        for (int i = 0; i < countYLetters; i++) {
+            System.out.print("[y" + (i * 2 + 10) + "] ");
+        }
+
+        System.out.println("\n\nThere are " + countAsterisks + " asterisks");
+        for (int i = 0; i < countAsterisks; i++) {
+            System.out.print("*");
+        }
+
+        System.out.println("\n\nThere are " + countXLetters + " letter x");
+        for (int i = 0; i < countXLetters; i++) {
+            System.out.print("x ");
+        }
+
+        System.out.println("\n\nThere are " + countYLetters + " letter y");
+        for (int i = 0; i < countYLetters; i++) {
+            System.out.print("y ");
+        }
+
+        System.out.println("\n\nThere are " + countIntegers + " integer values");
+        for (int i = 0; i < countIntegers; i++) {
+            System.out.print((i * 2) + " ");
+        }
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        int rows = 5;
+        int cols = 5;
+
+        System.out.println("Enter row size: " + rows);
+        System.out.println("Enter col size: " + cols + "\n");
+
+        MatrixGenerator matrixGenerator = new MatrixGenerator(rows, cols);
+        System.out.println("Generated Values are: ");
+        matrixGenerator.generateMatrix();
+    }
+}
+
+-->
+</div>
 </body>
 <script src="script.js"></script>
 </html>
